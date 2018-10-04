@@ -1,0 +1,62 @@
+<p>
+  home works!
+  {{childmessage}}
+</p>
+<button (click)="show=!show">{{show ? 'hide' : 'show'}}</button>
+
+<div *ngIf="show">
+    <p>
+        <label><input #big type="checkbox" name="size" (change)="0" checked>Big</label>
+        <label><input #small type="checkbox" name="size" (change)="0">Small</label>
+    </p>
+
+   <h3 *ngIf="big.checked">Big heading</h3>
+    <p *ngIf="small.checked">Small paragraph</p>
+</div>`
+
+
+<h2>HTML Forms</h2>
+
+<!-- <form> -->
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse">
+  <br><br>
+  <input type="submit" (click)="onClickMe()" value="Submit">
+  <p>{{clickMessage}}</p>
+<!-- </form>  -->
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+
+<!-- 
+<button (click)="toggle()" id="bt">
+  {{buttonName}}
+</button>
+
+<ng-container *ngIf="show">
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()"> -->
+        <!-- <label>
+          First Name:
+          <input type="text" formControlName="firstName" required>
+        </label>
+      
+        <label>
+          Last Name:
+          <input type="text" formControlName="lastName">
+        </label> -->
+    <!-- <label>Expiry Date
+        <select formControlName="expirydays">
+            <option *ngFor="let expiryday of expirydays" [ngValue]="expirydays">
+              {{ expirydays.abbrev }}
+            </option>
+          </select>
+        </label>
+      
+        <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+      </form>
+      
+</ng-container> -->
+
